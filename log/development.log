@@ -1,0 +1,1455 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-09-02 22:42:19 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 652.8ms | Allocations: 154979)
+Completed 500 Internal Server Error in 667ms (ActiveRecord: 0.0ms | Allocations: 164995)
+
+
+  
+ActionView::Template::Error (Asset `grape_swagger_rails/application.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link grape_swagger_rails/application.css
+
+and restart your server):
+    4:   <title><%= GrapeSwaggerRails.options.app_name || 'Swagger UI' %></title>
+    5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    6:   <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+    7:   <%= stylesheet_link_tag 'grape_swagger_rails/application.css' %>
+    8:   <%= javascript_include_tag 'grape_swagger_rails/application.js' %>
+    9:   <script type="text/javascript">
+   10: 	$(function () {
+  
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:372:in `raise_unless_precompiled_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:338:in `digest_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:326:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:103:in `block in resolve_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:243:in `block in resolve_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `each'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `detect'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `resolve_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:102:in `resolve_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:80:in `compute_asset_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_url_helper.rb:348:in `stylesheet_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:180:in `block in stylesheet_link_tag'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:179:in `map'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:179:in `stylesheet_link_tag'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:186:in `block in stylesheet_link_tag'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:184:in `map'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:184:in `stylesheet_link_tag'
+grape-swagger-rails (0.4.0) app/views/grape_swagger_rails/application/index.html.erb:7
+actionview (7.0.7.2) lib/action_view/base.rb:244:in `public_send'
+actionview (7.0.7.2) lib/action_view/base.rb:244:in `_run'
+actionview (7.0.7.2) lib/action_view/template.rb:157:in `block in render'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:208:in `instrument'
+actionview (7.0.7.2) lib/action_view/template.rb:361:in `instrument_render_template'
+actionview (7.0.7.2) lib/action_view/template.rb:155:in `render'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:65:in `block (2 levels) in render_template'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:60:in `block in render_template'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:79:in `render_with_layout'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:59:in `render_template'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:11:in `render'
+actionview (7.0.7.2) lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+actionview (7.0.7.2) lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+actionview (7.0.7.2) lib/action_view/rendering.rb:117:in `block in _render_template'
+actionview (7.0.7.2) lib/action_view/base.rb:270:in `in_rendering_context'
+actionview (7.0.7.2) lib/action_view/rendering.rb:116:in `_render_template'
+actionpack (7.0.7.2) lib/action_controller/metal/streaming.rb:216:in `_render_template'
+actionview (7.0.7.2) lib/action_view/rendering.rb:103:in `render_to_body'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:158:in `render_to_body'
+actionpack (7.0.7.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+actionpack (7.0.7.2) lib/abstract_controller/rendering.rb:27:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:139:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:22:in `block (2 levels) in render'
+/Users/shahid/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0/benchmark.rb:308:in `realtime'
+activesupport (7.0.7.2) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:22:in `block in render'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:91:in `cleanup_view_runtime'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:21:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:35:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+railties (7.0.7.2) lib/rails/railtie.rb:226:in `public_send'
+railties (7.0.7.2) lib/rails/railtie.rb:226:in `method_missing'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-02 22:43:21 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 137.9ms | Allocations: 92710)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms | Allocations: 99940)
+
+
+  
+ActionView::Template::Error (Asset `grape_swagger_rails/application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link grape_swagger_rails/application.js
+
+and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6:   <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+     7:   <%= stylesheet_link_tag 'grape_swagger_rails/application.css' %>
+     8:   <%= javascript_include_tag 'grape_swagger_rails/application.js' %>
+     9:   <script type="text/javascript">
+    10: 	$(function () {
+    11: 	  var options = $("html").data('swagger-options');
+  
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:372:in `raise_unless_precompiled_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:338:in `digest_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:326:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:103:in `block in resolve_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:243:in `block in resolve_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `each'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `detect'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:242:in `resolve_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:102:in `resolve_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:80:in `compute_asset_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_url_helper.rb:321:in `javascript_path'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:100:in `block in javascript_include_tag'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:99:in `map'
+actionview (7.0.7.2) lib/action_view/helpers/asset_tag_helper.rb:99:in `javascript_include_tag'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:157:in `block in javascript_include_tag'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:155:in `map'
+sprockets-rails (3.4.2) lib/sprockets/rails/helper.rb:155:in `javascript_include_tag'
+grape-swagger-rails (0.4.0) app/views/grape_swagger_rails/application/index.html.erb:8
+actionview (7.0.7.2) lib/action_view/base.rb:244:in `public_send'
+actionview (7.0.7.2) lib/action_view/base.rb:244:in `_run'
+actionview (7.0.7.2) lib/action_view/template.rb:157:in `block in render'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:208:in `instrument'
+actionview (7.0.7.2) lib/action_view/template.rb:361:in `instrument_render_template'
+actionview (7.0.7.2) lib/action_view/template.rb:155:in `render'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:65:in `block (2 levels) in render_template'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:60:in `block in render_template'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:79:in `render_with_layout'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:59:in `render_template'
+actionview (7.0.7.2) lib/action_view/renderer/template_renderer.rb:11:in `render'
+actionview (7.0.7.2) lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+actionview (7.0.7.2) lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+actionview (7.0.7.2) lib/action_view/rendering.rb:117:in `block in _render_template'
+actionview (7.0.7.2) lib/action_view/base.rb:270:in `in_rendering_context'
+actionview (7.0.7.2) lib/action_view/rendering.rb:116:in `_render_template'
+actionpack (7.0.7.2) lib/action_controller/metal/streaming.rb:216:in `_render_template'
+actionview (7.0.7.2) lib/action_view/rendering.rb:103:in `render_to_body'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:158:in `render_to_body'
+actionpack (7.0.7.2) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+actionpack (7.0.7.2) lib/abstract_controller/rendering.rb:27:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:139:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:22:in `block (2 levels) in render'
+/Users/shahid/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0/benchmark.rb:308:in `realtime'
+activesupport (7.0.7.2) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:22:in `block in render'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:91:in `cleanup_view_runtime'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:21:in `render'
+actionpack (7.0.7.2) lib/action_controller/metal/implicit_render.rb:35:in `default_render'
+actionpack (7.0.7.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.7.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.7.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.7.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.7.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.7.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.7.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+railties (7.0.7.2) lib/rails/railtie.rb:226:in `public_send'
+railties (7.0.7.2) lib/rails/railtie.rb:226:in `method_missing'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-09-02 22:44:07 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 30.3ms | Allocations: 43098)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 50387)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-02 22:44:08 +0900
+Started GET "/" for ::1 at 2023-09-02 22:47:30 +0900
+  
+NoMethodError (undefined method `ormat' for API::V1::Base:Class
+Did you mean?  format):
+  
+app/controllers/api/v1/base.rb:4:in `<class:Base>'
+app/controllers/api/v1/base.rb:3:in `<module:V1>'
+app/controllers/api/v1/base.rb:2:in `<module:API>'
+app/controllers/api/v1/base.rb:1:in `<main>'
+app/controllers/api/base.rb:5:in `<class:Base>'
+app/controllers/api/base.rb:2:in `<module:API>'
+app/controllers/api/base.rb:1:in `<main>'
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2023-09-02 22:47:44 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 3.8ms | Allocations: 4045)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 5013)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-02 22:47:44 +0900
+Started GET "/v1/vessels" for ::1 at 2023-09-02 22:47:50 +0900
+  [1m[36mVessel Load (1.6ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:10:in `new'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (37.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "naccs_development"[0m
+  [1m[35m (21.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "naccs_test"[0m
+  [1m[35m (145.3ms)[0m  [1m[35mCREATE DATABASE "naccs_development" ENCODING = 'unicode'[0m
+  [1m[35m (44.4ms)[0m  [1m[35mCREATE DATABASE "naccs_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-03 01:58:28.383422"], ["updated_at", "2023-09-03 01:58:28.383422"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-09-03 11:00:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 23.4ms | Allocations: 36651)
+Completed 200 OK in 102ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 322511)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:00:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mVessel Load (0.9ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07271649"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.9ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR21727804963"], ["naccs_code", "07271649"], ["start_location", "FLL"], ["destination", "IAD"], ["ship_type", 4], ["created_at", "2023-09-03 02:06:47.215762"], ["updated_at", "2023-09-03 02:06:47.215762"]]
+  [1m[36mVesselTracking Create (1.6ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 1], ["next_port", "Jo Kwon"], ["eta", "2023-09-05 02:06:47 UTC"], ["speed", "42 + KM"], ["created_at", "2023-09-03 02:06:47.217358"], ["updated_at", "2023-09-03 02:06:47.217358"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14146589"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tethys"], ["owner_id", "HR77199629150"], ["naccs_code", "14146589"], ["start_location", "IAH"], ["destination", "SEA"], ["ship_type", 4], ["created_at", "2023-09-03 02:06:47.221657"], ["updated_at", "2023-09-03 02:06:47.221657"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 2], ["next_port", "Shin Dongho"], ["eta", "2023-09-05 02:06:47 UTC"], ["speed", "26 + KM"], ["created_at", "2023-09-03 02:06:47.222488"], ["updated_at", "2023-09-03 02:06:47.222488"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04752981"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR39848020389"], ["naccs_code", "04752981"], ["start_location", "CLT"], ["destination", "PHX"], ["ship_type", 3], ["created_at", "2023-09-03 02:06:47.225055"], ["updated_at", "2023-09-03 02:06:47.225055"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 3], ["next_port", "Kim Kyu-jong"], ["eta", "2023-09-05 02:06:47 UTC"], ["speed", "38 + KM"], ["created_at", "2023-09-03 02:06:47.225838"], ["updated_at", "2023-09-03 02:06:47.225838"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07941023"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.4ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Asteria"], ["owner_id", "HR99701161730"], ["naccs_code", "07941023"], ["start_location", "MDW"], ["destination", "MDW"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.151232"], ["updated_at", "2023-09-03 02:08:09.151232"]]
+  [1m[36mVesselTracking Create (0.7ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 4], ["next_port", "Kim Joon"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "35 + KM"], ["created_at", "2023-09-03 02:08:09.152427"], ["updated_at", "2023-09-03 02:08:09.152427"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11924265"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Menoetius"], ["owner_id", "HR10619191928"], ["naccs_code", "11924265"], ["start_location", "HNL"], ["destination", "BWI"], ["ship_type", 2], ["created_at", "2023-09-03 02:08:09.156111"], ["updated_at", "2023-09-03 02:08:09.156111"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 5], ["next_port", "Lee Hong-gi"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "12 + KM"], ["created_at", "2023-09-03 02:08:09.156867"], ["updated_at", "2023-09-03 02:08:09.156867"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05820931"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR32714747359"], ["naccs_code", "05820931"], ["start_location", "IAH"], ["destination", "LAS"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.159496"], ["updated_at", "2023-09-03 02:08:09.159496"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 6], ["next_port", "Tasha Reid"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "41 + KM"], ["created_at", "2023-09-03 02:08:09.160276"], ["updated_at", "2023-09-03 02:08:09.160276"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03991176"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eurynome"], ["owner_id", "HR63820724911"], ["naccs_code", "03991176"], ["start_location", "ATL"], ["destination", "EWR"], ["ship_type", 3], ["created_at", "2023-09-03 02:08:09.162968"], ["updated_at", "2023-09-03 02:08:09.162968"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 7], ["next_port", "Do Kyung-soo"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "41 + KM"], ["created_at", "2023-09-03 02:08:09.163734"], ["updated_at", "2023-09-03 02:08:09.163734"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11140900"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eurynome"], ["owner_id", "HR64924658501"], ["naccs_code", "11140900"], ["start_location", "DEN"], ["destination", "SLC"], ["ship_type", 1], ["created_at", "2023-09-03 02:08:09.166434"], ["updated_at", "2023-09-03 02:08:09.166434"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 8], ["next_port", "Lee Junho"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "16 + KM"], ["created_at", "2023-09-03 02:08:09.167250"], ["updated_at", "2023-09-03 02:08:09.167250"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12739950"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Styx"], ["owner_id", "HR20708398489"], ["naccs_code", "12739950"], ["start_location", "JFK"], ["destination", "SFO"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.170296"], ["updated_at", "2023-09-03 02:08:09.170296"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 9], ["next_port", "MC Mong"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "33 + KM"], ["created_at", "2023-09-03 02:08:09.171103"], ["updated_at", "2023-09-03 02:08:09.171103"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08281272"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR50349046611"], ["naccs_code", "08281272"], ["start_location", "SFO"], ["destination", "FLL"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.173748"], ["updated_at", "2023-09-03 02:08:09.173748"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 10], ["next_port", "Lee Jae-won"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "47 + KM"], ["created_at", "2023-09-03 02:08:09.174507"], ["updated_at", "2023-09-03 02:08:09.174507"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13994037"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pallas"], ["owner_id", "HR28331411581"], ["naccs_code", "13994037"], ["start_location", "BOS"], ["destination", "HNL"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.177062"], ["updated_at", "2023-09-03 02:08:09.177062"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 11], ["next_port", "NS Yoon-G"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "7 + KM"], ["created_at", "2023-09-03 02:08:09.177812"], ["updated_at", "2023-09-03 02:08:09.177812"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13644505"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR34622064021"], ["naccs_code", "13644505"], ["start_location", "IAH"], ["destination", "MSP"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.180347"], ["updated_at", "2023-09-03 02:08:09.180347"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 12], ["next_port", "Lay"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "20 + KM"], ["created_at", "2023-09-03 02:08:09.181096"], ["updated_at", "2023-09-03 02:08:09.181096"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07311086"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR97960040739"], ["naccs_code", "07311086"], ["start_location", "EWR"], ["destination", "DTW"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.183649"], ["updated_at", "2023-09-03 02:08:09.183649"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 13], ["next_port", "Song Ji-hyo"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "10 + KM"], ["created_at", "2023-09-03 02:08:09.184404"], ["updated_at", "2023-09-03 02:08:09.184404"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15233134"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR12164959221"], ["naccs_code", "15233134"], ["start_location", "JFK"], ["destination", "DEN"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.187032"], ["updated_at", "2023-09-03 02:08:09.187032"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 14], ["next_port", "Lee Tae-min"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "39 + KM"], ["created_at", "2023-09-03 02:08:09.187768"], ["updated_at", "2023-09-03 02:08:09.187768"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01124408"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tethys"], ["owner_id", "HR48518522185"], ["naccs_code", "01124408"], ["start_location", "DEN"], ["destination", "SLC"], ["ship_type", 1], ["created_at", "2023-09-03 02:08:09.190263"], ["updated_at", "2023-09-03 02:08:09.190263"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 15], ["next_port", "Gain"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "18 + KM"], ["created_at", "2023-09-03 02:08:09.190990"], ["updated_at", "2023-09-03 02:08:09.190990"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09643055"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR10390719888"], ["naccs_code", "09643055"], ["start_location", "ATL"], ["destination", "DFW"], ["ship_type", 2], ["created_at", "2023-09-03 02:08:09.193537"], ["updated_at", "2023-09-03 02:08:09.193537"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 16], ["next_port", "Kim Heechul"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "22 + KM"], ["created_at", "2023-09-03 02:08:09.194299"], ["updated_at", "2023-09-03 02:08:09.194299"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05009640"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR46904561747"], ["naccs_code", "05009640"], ["start_location", "MDW"], ["destination", "SEA"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.196804"], ["updated_at", "2023-09-03 02:08:09.196804"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 17], ["next_port", "Juniel"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "32 + KM"], ["created_at", "2023-09-03 02:08:09.197530"], ["updated_at", "2023-09-03 02:08:09.197530"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09890671"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR71496312483"], ["naccs_code", "09890671"], ["start_location", "PHX"], ["destination", "PHL"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.200128"], ["updated_at", "2023-09-03 02:08:09.200128"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 18], ["next_port", "Lee Sora"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "27 + KM"], ["created_at", "2023-09-03 02:08:09.200886"], ["updated_at", "2023-09-03 02:08:09.200886"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18502916"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR84010499065"], ["naccs_code", "18502916"], ["start_location", "HNL"], ["destination", "SLC"], ["ship_type", 4], ["created_at", "2023-09-03 02:08:09.203453"], ["updated_at", "2023-09-03 02:08:09.203453"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 19], ["next_port", "Park Ji-yeon"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "47 + KM"], ["created_at", "2023-09-03 02:08:09.204181"], ["updated_at", "2023-09-03 02:08:09.204181"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07787652"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR83996885910"], ["naccs_code", "07787652"], ["start_location", "TPA"], ["destination", "MDW"], ["ship_type", 1], ["created_at", "2023-09-03 02:08:09.206663"], ["updated_at", "2023-09-03 02:08:09.206663"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 20], ["next_port", "Eru"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "3 + KM"], ["created_at", "2023-09-03 02:08:09.207403"], ["updated_at", "2023-09-03 02:08:09.207403"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04875437"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR18506228198"], ["naccs_code", "04875437"], ["start_location", "LAX"], ["destination", "DCA"], ["ship_type", 3], ["created_at", "2023-09-03 02:08:09.209850"], ["updated_at", "2023-09-03 02:08:09.209850"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 21], ["next_port", "No Minwoo"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "49 + KM"], ["created_at", "2023-09-03 02:08:09.210587"], ["updated_at", "2023-09-03 02:08:09.210587"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04665052"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR22439569506"], ["naccs_code", "04665052"], ["start_location", "DEN"], ["destination", "CLT"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.213049"], ["updated_at", "2023-09-03 02:08:09.213049"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 22], ["next_port", "So Chan-whee"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "44 + KM"], ["created_at", "2023-09-03 02:08:09.213801"], ["updated_at", "2023-09-03 02:08:09.213801"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16684720"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR41005182889"], ["naccs_code", "16684720"], ["start_location", "IAH"], ["destination", "MIA"], ["ship_type", 0], ["created_at", "2023-09-03 02:08:09.216346"], ["updated_at", "2023-09-03 02:08:09.216346"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 23], ["next_port", "Kwon Mina"], ["eta", "2023-09-05 02:08:09 UTC"], ["speed", "48 + KM"], ["created_at", "2023-09-03 02:08:09.217074"], ["updated_at", "2023-09-03 02:08:09.217074"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (73.4ms)[0m  [1m[35mCREATE DATABASE "naccs_development" ENCODING = 'unicode'[0m
+  [1m[35m (34.8ms)[0m  [1m[35mCREATE DATABASE "naccs_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-03 02:08:52.443050"], ["updated_at", "2023-09-03 02:08:52.443050"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02321424"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.8ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR28565004444"], ["naccs_code", "02321424"], ["start_location", "MSP"], ["destination", "LAX"], ["ship_type", 2], ["created_at", "2023-09-03 02:21:51.273928"], ["updated_at", "2023-09-03 02:21:51.273928"]]
+  [1m[36mVesselTracking Create (1.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 1], ["next_port", "Krystal Jung"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "24 + KM"], ["created_at", "2023-09-03 02:21:51.275547"], ["updated_at", "2023-09-03 02:21:51.275547"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18774665"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Asteria"], ["owner_id", "HR31315871420"], ["naccs_code", "18774665"], ["start_location", "ATL"], ["destination", "LGA"], ["ship_type", 4], ["created_at", "2023-09-03 02:21:51.279508"], ["updated_at", "2023-09-03 02:21:51.279508"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 2], ["next_port", "Bae Seul-ki"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "44 + KM"], ["created_at", "2023-09-03 02:21:51.280280"], ["updated_at", "2023-09-03 02:21:51.280280"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09527980"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eos"], ["owner_id", "HR50963826747"], ["naccs_code", "09527980"], ["start_location", "BOS"], ["destination", "FLL"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.283027"], ["updated_at", "2023-09-03 02:21:51.283027"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 3], ["next_port", "MC Mong"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "22 + KM"], ["created_at", "2023-09-03 02:21:51.283824"], ["updated_at", "2023-09-03 02:21:51.283824"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03921227"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR78625264011"], ["naccs_code", "03921227"], ["start_location", "TPA"], ["destination", "PHL"], ["ship_type", 1], ["created_at", "2023-09-03 02:21:51.286488"], ["updated_at", "2023-09-03 02:21:51.286488"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 4], ["next_port", "Choi Minho"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "19 + KM"], ["created_at", "2023-09-03 02:21:51.287265"], ["updated_at", "2023-09-03 02:21:51.287265"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08032454"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR88294612564"], ["naccs_code", "08032454"], ["start_location", "SFO"], ["destination", "SAN"], ["ship_type", 2], ["created_at", "2023-09-03 02:21:51.289832"], ["updated_at", "2023-09-03 02:21:51.289832"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 5], ["next_port", "Amber Liu"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "17 + KM"], ["created_at", "2023-09-03 02:21:51.290570"], ["updated_at", "2023-09-03 02:21:51.290570"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13508357"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR92455164624"], ["naccs_code", "13508357"], ["start_location", "LAX"], ["destination", "LAX"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.293330"], ["updated_at", "2023-09-03 02:21:51.293330"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 6], ["next_port", "Lee Junho"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "13 + KM"], ["created_at", "2023-09-03 02:21:51.294249"], ["updated_at", "2023-09-03 02:21:51.294249"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04332503"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Prometheus"], ["owner_id", "HR69199703284"], ["naccs_code", "04332503"], ["start_location", "BWI"], ["destination", "HNL"], ["ship_type", 2], ["created_at", "2023-09-03 02:21:51.296814"], ["updated_at", "2023-09-03 02:21:51.296814"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 7], ["next_port", "Jang Keun-suk"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "26 + KM"], ["created_at", "2023-09-03 02:21:51.297563"], ["updated_at", "2023-09-03 02:21:51.297563"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01298482"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cronus"], ["owner_id", "HR65639062117"], ["naccs_code", "01298482"], ["start_location", "LAS"], ["destination", "LAX"], ["ship_type", 1], ["created_at", "2023-09-03 02:21:51.300122"], ["updated_at", "2023-09-03 02:21:51.300122"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 8], ["next_port", "K.Will"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "26 + KM"], ["created_at", "2023-09-03 02:21:51.300914"], ["updated_at", "2023-09-03 02:21:51.300914"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01253498"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Menoetius"], ["owner_id", "HR46672462077"], ["naccs_code", "01253498"], ["start_location", "DEN"], ["destination", "SAN"], ["ship_type", 1], ["created_at", "2023-09-03 02:21:51.303648"], ["updated_at", "2023-09-03 02:21:51.303648"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 9], ["next_port", "Min Hyuk"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "2 + KM"], ["created_at", "2023-09-03 02:21:51.304381"], ["updated_at", "2023-09-03 02:21:51.304381"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12347711"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR47900688670"], ["naccs_code", "12347711"], ["start_location", "TPA"], ["destination", "PHL"], ["ship_type", 2], ["created_at", "2023-09-03 02:21:51.306928"], ["updated_at", "2023-09-03 02:21:51.306928"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 10], ["next_port", "Park Ji-yoon"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "20 + KM"], ["created_at", "2023-09-03 02:21:51.307666"], ["updated_at", "2023-09-03 02:21:51.307666"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19987408"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR92412804713"], ["naccs_code", "19987408"], ["start_location", "TPA"], ["destination", "PDX"], ["ship_type", 1], ["created_at", "2023-09-03 02:21:51.310227"], ["updated_at", "2023-09-03 02:21:51.310227"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 11], ["next_port", "Lee Seung-hoon"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "34 + KM"], ["created_at", "2023-09-03 02:21:51.310971"], ["updated_at", "2023-09-03 02:21:51.310971"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04863397"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR24664686036"], ["naccs_code", "04863397"], ["start_location", "MSP"], ["destination", "DFW"], ["ship_type", 0], ["created_at", "2023-09-03 02:21:51.313521"], ["updated_at", "2023-09-03 02:21:51.313521"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 12], ["next_port", "Yoo Seung-ho"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "3 + KM"], ["created_at", "2023-09-03 02:21:51.314260"], ["updated_at", "2023-09-03 02:21:51.314260"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08879172"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Epimetheus"], ["owner_id", "HR98671912425"], ["naccs_code", "08879172"], ["start_location", "DEN"], ["destination", "DTW"], ["ship_type", 0], ["created_at", "2023-09-03 02:21:51.316776"], ["updated_at", "2023-09-03 02:21:51.316776"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 13], ["next_port", "Dara"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "3 + KM"], ["created_at", "2023-09-03 02:21:51.317533"], ["updated_at", "2023-09-03 02:21:51.317533"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15878229"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR32910485737"], ["naccs_code", "15878229"], ["start_location", "DTW"], ["destination", "HNL"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.320214"], ["updated_at", "2023-09-03 02:21:51.320214"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 14], ["next_port", "Mina"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "29 + KM"], ["created_at", "2023-09-03 02:21:51.321004"], ["updated_at", "2023-09-03 02:21:51.321004"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08344205"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR56436198981"], ["naccs_code", "08344205"], ["start_location", "DCA"], ["destination", "HNL"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.323650"], ["updated_at", "2023-09-03 02:21:51.323650"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 15], ["next_port", "Sim Soo-bong"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "34 + KM"], ["created_at", "2023-09-03 02:21:51.324413"], ["updated_at", "2023-09-03 02:21:51.324413"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02288963"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR58893313060"], ["naccs_code", "02288963"], ["start_location", "ORD"], ["destination", "SEA"], ["ship_type", 0], ["created_at", "2023-09-03 02:21:51.326925"], ["updated_at", "2023-09-03 02:21:51.326925"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 16], ["next_port", "MC Sniper"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "32 + KM"], ["created_at", "2023-09-03 02:21:51.327648"], ["updated_at", "2023-09-03 02:21:51.327648"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07768637"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Metis"], ["owner_id", "HR11889270632"], ["naccs_code", "07768637"], ["start_location", "BOS"], ["destination", "PDX"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.330115"], ["updated_at", "2023-09-03 02:21:51.330115"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 17], ["next_port", "Sandeul"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "34 + KM"], ["created_at", "2023-09-03 02:21:51.330874"], ["updated_at", "2023-09-03 02:21:51.330874"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13021641"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR33938794444"], ["naccs_code", "13021641"], ["start_location", "BWI"], ["destination", "ORD"], ["ship_type", 3], ["created_at", "2023-09-03 02:21:51.333620"], ["updated_at", "2023-09-03 02:21:51.333620"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 18], ["next_port", "Yeeun"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "13 + KM"], ["created_at", "2023-09-03 02:21:51.334425"], ["updated_at", "2023-09-03 02:21:51.334425"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01907926"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR39542288796"], ["naccs_code", "01907926"], ["start_location", "IAH"], ["destination", "MDW"], ["ship_type", 2], ["created_at", "2023-09-03 02:21:51.337087"], ["updated_at", "2023-09-03 02:21:51.337087"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 19], ["next_port", "Minzy"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "9 + KM"], ["created_at", "2023-09-03 02:21:51.337833"], ["updated_at", "2023-09-03 02:21:51.337833"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03375013"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR41963775595"], ["naccs_code", "03375013"], ["start_location", "MSP"], ["destination", "PDX"], ["ship_type", 1], ["created_at", "2023-09-03 02:21:51.340358"], ["updated_at", "2023-09-03 02:21:51.340358"]]
+  [1m[36mVesselTracking Create (0.2ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 20], ["next_port", "Park Gyu-ri"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "3 + KM"], ["created_at", "2023-09-03 02:21:51.341103"], ["updated_at", "2023-09-03 02:21:51.341103"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2023-09-03 11:22:08 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 22.6ms | Allocations: 36452)
+Completed 200 OK in 98ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 322318)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:22:08 +0900
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:22:13 +0900
+  [1m[36mVessel Load (0.9ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:10:in `new'
+  
+NoMethodError (undefined method `type' for #<Vessel id: 1, name: "Selene", owner_id: "HR28565004444", naccs_code: "02321424", start_location: "MSP", destination: "LAX", ship_type: "offshore_ships", created_at: "2023-09-03 02:21:51.273928000 +0000", updated_at: "2023-09-03 02:21:51.273928000 +0000">):
+  
+activemodel (7.0.7.2) lib/active_model/attribute_methods.rb:450:in `method_missing'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:398:in `read_attribute_for_serialization'
+active_model_serializers (0.10.13) lib/active_model/serializer/field.rb:25:in `value'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:341:in `block in attributes'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `each'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `each_with_object'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `attributes'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:409:in `attributes_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:372:in `serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:381:in `as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `block in as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `map'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:141:in `as_json'
+activesupport (7.0.7.2) lib/active_support/json/encoding.rb:35:in `encode'
+activesupport (7.0.7.2) lib/active_support/json/encoding.rb:22:in `encode'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:42:in `to_json'
+grape (1.8.0) lib/grape/formatter/json.rb:8:in `call'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `block (2 levels) in build_formatted_response'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `collect'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `block in build_formatted_response'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+grape (1.8.0) lib/grape/middleware/formatter.rb:47:in `build_formatted_response'
+grape (1.8.0) lib/grape/middleware/formatter.rb:31:in `after'
+grape (1.8.0) lib/grape/middleware/base.rb:39:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+grape (1.8.0) lib/grape/middleware/base.rb:36:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+grape (1.8.0) lib/grape/middleware/error.rb:39:in `block in call!'
+grape (1.8.0) lib/grape/middleware/error.rb:38:in `catch'
+grape (1.8.0) lib/grape/middleware/error.rb:38:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+grape (1.8.0) lib/grape/endpoint.rb:224:in `call!'
+grape (1.8.0) lib/grape/endpoint.rb:218:in `call'
+grape (1.8.0) lib/grape/router/route.rb:58:in `exec'
+grape (1.8.0) lib/grape/router.rb:120:in `process_route'
+grape (1.8.0) lib/grape/router.rb:74:in `block in identity'
+grape (1.8.0) lib/grape/router.rb:94:in `transaction'
+grape (1.8.0) lib/grape/router.rb:72:in `identity'
+grape (1.8.0) lib/grape/router.rb:56:in `block in call'
+grape (1.8.0) lib/grape/router.rb:136:in `with_optimization'
+grape (1.8.0) lib/grape/router.rb:55:in `call'
+grape (1.8.0) lib/grape/api/instance.rb:165:in `call'
+grape (1.8.0) lib/grape/api/instance.rb:70:in `call!'
+grape (1.8.0) lib/grape/api/instance.rb:65:in `call'
+grape (1.8.0) lib/grape/api.rb:81:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:22:50 +0900
+  [1m[36mVessel Load (0.4ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:10:in `new'
+  [1m[36mVesselTracking Load (0.6ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  
+NoMethodError (undefined method `status' for #<VesselTracking id: 1, vessel_id: 1, next_port: "Krystal Jung", eta: "2023-09-05 02:21:51 UTC", speed: "24 + KM", created_at: "2023-09-03 02:21:51.275547000 +0000", updated_at: "2023-09-03 02:21:51.275547000 +0000">):
+  
+activemodel (7.0.7.2) lib/active_model/attribute_methods.rb:450:in `method_missing'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:398:in `read_attribute_for_serialization'
+active_model_serializers (0.10.13) lib/active_model/serializer/field.rb:25:in `value'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:341:in `block in attributes'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `each'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `each_with_object'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:338:in `attributes'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:409:in `attributes_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:372:in `serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer/collection_serializer.rb:27:in `block in serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer/collection_serializer.rb:26:in `map'
+active_model_serializers (0.10.13) lib/active_model/serializer/collection_serializer.rb:26:in `serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer/association.rb:58:in `serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:419:in `block in associations_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:358:in `yield'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:358:in `block (2 levels) in associations'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:353:in `each'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:353:in `block in associations'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:417:in `each'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:417:in `each_with_object'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:417:in `associations_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:373:in `serializable_hash'
+active_model_serializers (0.10.13) lib/active_model/serializer.rb:381:in `as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `block in as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `map'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:159:in `as_json'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:141:in `as_json'
+activesupport (7.0.7.2) lib/active_support/json/encoding.rb:35:in `encode'
+activesupport (7.0.7.2) lib/active_support/json/encoding.rb:22:in `encode'
+activesupport (7.0.7.2) lib/active_support/core_ext/object/json.rb:42:in `to_json'
+grape (1.8.0) lib/grape/formatter/json.rb:8:in `call'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `block (2 levels) in build_formatted_response'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `collect'
+grape (1.8.0) lib/grape/middleware/formatter.rb:48:in `block in build_formatted_response'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.7.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.7.2) lib/active_support/notifications.rb:206:in `instrument'
+grape (1.8.0) lib/grape/middleware/formatter.rb:47:in `build_formatted_response'
+grape (1.8.0) lib/grape/middleware/formatter.rb:31:in `after'
+grape (1.8.0) lib/grape/middleware/base.rb:39:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+grape (1.8.0) lib/grape/middleware/base.rb:36:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+grape (1.8.0) lib/grape/middleware/error.rb:39:in `block in call!'
+grape (1.8.0) lib/grape/middleware/error.rb:38:in `catch'
+grape (1.8.0) lib/grape/middleware/error.rb:38:in `call!'
+grape (1.8.0) lib/grape/middleware/base.rb:29:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+grape (1.8.0) lib/grape/endpoint.rb:224:in `call!'
+grape (1.8.0) lib/grape/endpoint.rb:218:in `call'
+grape (1.8.0) lib/grape/router/route.rb:58:in `exec'
+grape (1.8.0) lib/grape/router.rb:120:in `process_route'
+grape (1.8.0) lib/grape/router.rb:74:in `block in identity'
+grape (1.8.0) lib/grape/router.rb:94:in `transaction'
+grape (1.8.0) lib/grape/router.rb:72:in `identity'
+grape (1.8.0) lib/grape/router.rb:56:in `block in call'
+grape (1.8.0) lib/grape/router.rb:136:in `with_optimization'
+grape (1.8.0) lib/grape/router.rb:55:in `call'
+grape (1.8.0) lib/grape/api/instance.rb:165:in `call'
+grape (1.8.0) lib/grape/api/instance.rb:70:in `call!'
+grape (1.8.0) lib/grape/api/instance.rb:65:in `call'
+grape (1.8.0) lib/grape/api.rb:81:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (7.0.7.2) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:23:13 +0900
+  [1m[36mVessel Load (0.5ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:10:in `new'
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 2]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 3]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 4]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 5]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 6]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 7]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 8]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 9]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 10]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 11]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 12]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 13]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 14]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 15]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 16]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 17]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 18]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 19]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 20]]
+Started GET "/" for ::1 at 2023-09-03 11:35:18 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 20.1ms | Allocations: 35486)
+Completed 200 OK in 100ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 321341)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:35:19 +0900
+Started GET "/" for ::1 at 2023-09-03 11:35:45 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.3ms | Allocations: 3991)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 4958)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:35:45 +0900
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:36:05 +0900
+  [1m[36mVessel Load (1.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:8:in `new'
+  [1m[36mVesselTracking Load (0.9ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  [1m[36mVesselTracking Load (0.6ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 2]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 3]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 4]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 5]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 6]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 7]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 8]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 9]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 10]]
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 11]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 12]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 13]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 14]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 15]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 16]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 17]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 18]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 19]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 20]]
+Started POST "/v1/vessels/create" for ::1 at 2023-09-03 11:37:22 +0900
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+  [1m[36mVessel Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02321429"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "SeleneA"], ["owner_id", "HR2856500444w"], ["naccs_code", "02321429"], ["start_location", "MSP"], ["destination", "LAX"], ["ship_type", 2], ["created_at", "2023-09-03 02:37:22.301911"], ["updated_at", "2023-09-03 02:37:22.301911"]]
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+Started POST "/v1/vessels/create" for ::1 at 2023-09-03 11:39:30 +0900
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+  [1m[36mVessel Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02321429"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/vessels.rb:23:in `block in <class:Vessels>'
+Started GET "/" for ::1 at 2023-09-03 11:42:48 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.9ms | Allocations: 4065)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 5041)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:42:48 +0900
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:42:55 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:8:in `new'
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 2]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 3]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 4]]
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 5]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 6]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 7]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 8]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 9]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 10]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 11]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 12]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 13]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 14]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 15]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 16]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 17]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 18]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 19]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 20]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 21]]
+Started GET "/" for ::1 at 2023-09-03 11:45:10 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 3991)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 4957)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:45:10 +0900
+Started GET "/v1/vessels/show?id=1" for ::1 at 2023-09-03 11:45:19 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:17:in `block in <class:Vessels>'
+  
+NoMethodError (undefined method `map' for #<Vessel id: 1, name: "Selene", owner_id: "HR28565004444", naccs_code: "02321424", start_location: "MSP", destination: "LAX", ship_type: "offshore_ships", created_at: "2023-09-03 02:21:51.273928000 +0000", updated_at: "2023-09-03 02:21:51.273928000 +0000">
+Did you mean?  tap):
+  
+app/controllers/api/v1/vessels.rb:19:in `new'
+app/controllers/api/v1/vessels.rb:19:in `block in <class:Vessels>'
+Started GET "/v1/vessels/show?id=1" for ::1 at 2023-09-03 11:45:41 +0900
+  
+ArgumentError (Unsupported argument type: 1 (Integer)):
+  
+app/controllers/api/v1/vessels.rb:17:in `block in <class:Vessels>'
+Started GET "/v1/vessels/show?id=1" for ::1 at 2023-09-03 11:47:39 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:19:in `new'
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+Started PUT "/v1/vessels/update" for ::1 at 2023-09-03 11:48:13 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:53:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessels.rb:54:in `block in <class:Vessels>'
+  [1m[36mVessel Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 AND "vessels"."id" != $2 LIMIT $3[0m  [["naccs_code", "02321424"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:54:in `block in <class:Vessels>'
+  [1m[36mVessel Update (0.4ms)[0m  [1m[33mUPDATE "vessels" SET "name" = $1, "updated_at" = $2 WHERE "vessels"."id" = $3[0m  [["name", "Selene1"], ["updated_at", "2023-09-03 02:48:13.293834"], ["id", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:54:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessels.rb:54:in `block in <class:Vessels>'
+Started GET "/v1/vessels/show?id=1" for ::1 at 2023-09-03 11:48:24 +0900
+  [1m[36mVessel Load (0.5ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:19:in `new'
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+Started GET "/" for ::1 at 2023-09-03 11:50:49 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 4048)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 5016)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:50:49 +0900
+Started GET "/v1/vessels" for ::1 at 2023-09-03 11:50:55 +0900
+  [1m[36mVessel Load (0.5ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  ↳ app/controllers/api/v1/vessels.rb:8:in `new'
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 2]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 3]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 4]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 5]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 6]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 7]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 8]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 9]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 10]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 11]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 12]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 13]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 14]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 15]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 16]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 17]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 18]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 19]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 20]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 21]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+Started DELETE "/v1/vessels/distroy?id=20" for ::1 at 2023-09-03 11:51:20 +0900
+  [1m[36mVessel Load (0.4ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:67:in `block in <class:Vessels>'
+  
+NoMethodError (undefined method `distroy' for #<Vessel id: 20, name: "Perses", owner_id: "HR41963775595", naccs_code: "03375013", start_location: "MSP", destination: "PDX", ship_type: "tanker_ships", created_at: "2023-09-03 02:21:51.340358000 +0000", updated_at: "2023-09-03 02:21:51.340358000 +0000">
+Did you mean?  destroy
+               destroy!
+               _destroy):
+  
+app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+Started GET "/" for ::1 at 2023-09-03 11:51:41 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 3988)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 4954)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:51:41 +0900
+Started DELETE "/v1/vessels/destroy?id=20" for ::1 at 2023-09-03 11:51:47 +0900
+  [1m[36mVessel Load (0.5ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:67:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mVessel Destroy (2.1ms)[0m  [1m[31mDELETE FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "vessels" violates foreign key constraint "fk_rails_a73d82b9b5" on table "vessel_trackings"
+DETAIL:  Key (id)=(20) is still referenced from table "vessel_trackings".
+):
+  
+app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+Started DELETE "/v1/vessels/destroy?id=20" for ::1 at 2023-09-03 11:53:37 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:67:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 20]]
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mVesselTracking Destroy (0.3ms)[0m  [1m[31mDELETE FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mVessel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+Started DELETE "/v1/vessels/destroy?id=20" for ::1 at 2023-09-03 11:53:45 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:67:in `block in <class:Vessels>'
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+Started GET "/" for ::1 at 2023-09-03 11:56:42 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.8ms | Allocations: 4048)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 5015)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 11:56:42 +0900
+Started DELETE "/v1/vessels/destroy?id=20" for ::1 at 2023-09-03 11:56:46 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessels.rb:69:in `block in <class:Vessels>'
+Started GET "/" for ::1 at 2023-09-03 12:03:28 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.6ms | Allocations: 3988)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 4954)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:03:28 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:03:36 +0900
+  
+NoMethodError (undefined method `where' for API::V1::VesselTrackings:Class):
+  
+app/controllers/api/v1/vessel_trackings.rb:10:in `block in <class:VesselTrackings>'
+Started GET "/" for ::1 at 2023-09-03 12:03:55 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 4048)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 5016)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:03:55 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:04:00 +0900
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started GET "/" for ::1 at 2023-09-03 12:08:00 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 3988)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 4954)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:08:00 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:08:08 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started POST "/v1/vessel_trackings/create" for ::1 at 2023-09-03 12:08:55 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:25:in `block in <class:VesselTrackings>'
+  [1m[36mVessel Load (0.7ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:25:in `block in <class:VesselTrackings>'
+  [1m[36mVesselTracking Create (1.1ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 1], ["next_port", "Krystal01"], ["eta", "2023-09-05 02:21:51 UTC"], ["speed", "24 KM"], ["created_at", "2023-09-03 03:08:55.195742"], ["updated_at", "2023-09-03 03:08:55.195742"]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:25:in `block in <class:VesselTrackings>'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:25:in `block in <class:VesselTrackings>'
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:09:00 +0900
+  [1m[36mVesselTracking Load (0.5ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started GET "/" for ::1 at 2023-09-03 12:11:03 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.3ms | Allocations: 3988)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 4955)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:11:03 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:11:10 +0900
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started GET "/" for ::1 at 2023-09-03 12:11:31 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.4ms | Allocations: 4048)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 5015)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:11:31 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:11:38 +0900
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started PUT "/v1/vessel_trackings/update" for ::1 at 2023-09-03 12:12:04 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:41:in `block in <class:VesselTrackings>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:42:in `block in <class:VesselTrackings>'
+  [1m[36mVessel Load (0.5ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:42:in `block in <class:VesselTrackings>'
+  [1m[36mVesselTracking Update (0.5ms)[0m  [1m[33mUPDATE "vessel_trackings" SET "eta" = $1, "updated_at" = $2 WHERE "vessel_trackings"."id" = $3[0m  [["eta", "2023-09-06 02:21:51 UTC"], ["updated_at", "2023-09-03 03:12:04.933049"], ["id", 21]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:42:in `block in <class:VesselTrackings>'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:42:in `block in <class:VesselTrackings>'
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:12:09 +0900
+  [1m[36mVesselTracking Load (0.5ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started GET "/" for ::1 at 2023-09-03 12:13:54 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 2.3ms | Allocations: 3988)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 4954)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:13:54 +0900
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:14:00 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started DELETE "/v1/vessel_trackings/destroy?id=21" for ::1 at 2023-09-03 12:14:09 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:55:in `block in <class:VesselTrackings>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:59:in `block in <class:VesselTrackings>'
+  [1m[36mVesselTracking Destroy (0.4ms)[0m  [1m[31mDELETE FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:59:in `block in <class:VesselTrackings>'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/vessel_trackings.rb:59:in `block in <class:VesselTrackings>'
+Started GET "/v1/vessel_trackings?vessel_id=1" for ::1 at 2023-09-03 12:14:14 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 1]]
+  ↳ app/controllers/api/v1/vessel_trackings.rb:12:in `new'
+Started GET "/" for ::1 at 2023-09-03 12:14:37 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 6.1ms | Allocations: 3906)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4329)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:14:37 +0900
+Started GET "/" for ::1 at 2023-09-03 12:14:39 +0900
+Processing by GrapeSwaggerRails::ApplicationController#index as HTML
+  Rendering /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb
+  Rendered /Users/shahid/.rvm/gems/ruby-3.0.3/gems/grape-swagger-rails-0.4.0/app/views/grape_swagger_rails/application/index.html.erb (Duration: 5.7ms | Allocations: 3774)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 4139)
+
+
+Started GET "/v1/swagger_doc.json" for ::1 at 2023-09-03 12:14:39 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "naccs_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "naccs_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (39.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "naccs_development"[0m
+  [1m[35m (26.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "naccs_test"[0m
+  [1m[35m (151.1ms)[0m  [1m[35mCREATE DATABASE "naccs_development" ENCODING = 'unicode'[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCREATE DATABASE "naccs_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-03 05:35:56.460988"], ["updated_at", "2023-09-03 05:35:56.460988"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1566530313687634050)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (155.2ms)[0m  [1m[35mCREATE DATABASE "vessel_management_development" ENCODING = 'unicode'[0m
+  [1m[35m (49.8ms)[0m  [1m[35mCREATE DATABASE "vessel_management_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-03 06:57:07.363699"], ["updated_at", "2023-09-03 06:57:07.363699"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (44.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vessel_management_development"[0m
+  [1m[35m (26.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vessel_management_test"[0m
+  [1m[35m (135.9ms)[0m  [1m[35mCREATE DATABASE "vessel_management_development" ENCODING = 'unicode'[0m
+  [1m[35m (39.1ms)[0m  [1m[35mCREATE DATABASE "vessel_management_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-03 10:14:34.593520"], ["updated_at", "2023-09-03 10:14:34.593520"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVessels (20230902055434)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "vessels" ("id" bigserial primary key, "name" character varying(100), "owner_id" character varying(30), "naccs_code" character varying(30) NOT NULL, "start_location" character varying(200), "destination" character varying(200), "ship_type" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_vessels_on_naccs_code" ON "vessels" ("naccs_code")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230902055434"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVesselTrackings (20230902062447)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "vessel_trackings" ("id" bigserial primary key, "vessel_id" bigint NOT NULL, "next_port" character varying, "eta" character varying, "speed" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_a73d82b9b5"
+FOREIGN KEY ("vessel_id")
+  REFERENCES "vessels" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_vessel_trackings_on_vessel_id" ON "vessel_trackings" ("vessel_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230902062447"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5337996680679850215)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13905675"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.9ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Asteria"], ["owner_id", "HR48056476381"], ["naccs_code", "13905675"], ["start_location", "DEN"], ["destination", "HNL"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.858600"], ["updated_at", "2023-09-03 10:27:30.858600"]]
+  [1m[36mVesselTracking Create (1.6ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 1], ["next_port", "Choi Sulli"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "46 KM/H"], ["created_at", "2023-09-03 10:27:30.860277"], ["updated_at", "2023-09-03 10:27:30.860277"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02390383"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR74232105067"], ["naccs_code", "02390383"], ["start_location", "ORD"], ["destination", "MCO"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.864657"], ["updated_at", "2023-09-03 10:27:30.864657"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 2], ["next_port", "MC Sniper"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "10 KM/H"], ["created_at", "2023-09-03 10:27:30.865484"], ["updated_at", "2023-09-03 10:27:30.865484"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01937190"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Styx"], ["owner_id", "HR15203847039"], ["naccs_code", "01937190"], ["start_location", "PHX"], ["destination", "IAD"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.868259"], ["updated_at", "2023-09-03 10:27:30.868259"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 3], ["next_port", "Lee Sung-yeol"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "38 KM/H"], ["created_at", "2023-09-03 10:27:30.869052"], ["updated_at", "2023-09-03 10:27:30.869052"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06717391"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.4ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Coeus"], ["owner_id", "HR75562485206"], ["naccs_code", "06717391"], ["start_location", "MCO"], ["destination", "MSP"], ["ship_type", 4], ["created_at", "2023-09-03 10:27:30.871940"], ["updated_at", "2023-09-03 10:27:30.871940"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 4], ["next_port", "Outsider"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "35 KM/H"], ["created_at", "2023-09-03 10:27:30.872850"], ["updated_at", "2023-09-03 10:27:30.872850"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05702374"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Lelantos"], ["owner_id", "HR18598454578"], ["naccs_code", "05702374"], ["start_location", "SEA"], ["destination", "SEA"], ["ship_type", 1], ["created_at", "2023-09-03 10:27:30.875745"], ["updated_at", "2023-09-03 10:27:30.875745"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 5], ["next_port", "Uhm Jung-hwa"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "20 KM/H"], ["created_at", "2023-09-03 10:27:30.876579"], ["updated_at", "2023-09-03 10:27:30.876579"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12638062"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR19217104235"], ["naccs_code", "12638062"], ["start_location", "PHX"], ["destination", "EWR"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.879461"], ["updated_at", "2023-09-03 10:27:30.879461"]]
+  [1m[36mVesselTracking Create (0.4ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 6], ["next_port", "Lee Jung-hyun"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "38 KM/H"], ["created_at", "2023-09-03 10:27:30.880281"], ["updated_at", "2023-09-03 10:27:30.880281"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14001284"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Mnemosyne"], ["owner_id", "HR98032407970"], ["naccs_code", "14001284"], ["start_location", "LAX"], ["destination", "DEN"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.883172"], ["updated_at", "2023-09-03 10:27:30.883172"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 7], ["next_port", "Outsider"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "9 KM/H"], ["created_at", "2023-09-03 10:27:30.883983"], ["updated_at", "2023-09-03 10:27:30.883983"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12012459"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Mnemosyne"], ["owner_id", "HR72254780555"], ["naccs_code", "12012459"], ["start_location", "PHX"], ["destination", "PHL"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.886775"], ["updated_at", "2023-09-03 10:27:30.886775"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 8], ["next_port", "Lee Min-ho"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "46 KM/H"], ["created_at", "2023-09-03 10:27:30.887576"], ["updated_at", "2023-09-03 10:27:30.887576"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08390479"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eurynome"], ["owner_id", "HR76586078306"], ["naccs_code", "08390479"], ["start_location", "SLC"], ["destination", "CLT"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.890387"], ["updated_at", "2023-09-03 10:27:30.890387"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 9], ["next_port", "Uhm Jung-hwa"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "20 KM/H"], ["created_at", "2023-09-03 10:27:30.891187"], ["updated_at", "2023-09-03 10:27:30.891187"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09406506"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR55690917888"], ["naccs_code", "09406506"], ["start_location", "MDW"], ["destination", "MCO"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.893961"], ["updated_at", "2023-09-03 10:27:30.893961"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 10], ["next_port", "You Hee-yeol"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "38 KM/H"], ["created_at", "2023-09-03 10:27:30.894755"], ["updated_at", "2023-09-03 10:27:30.894755"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15150059"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Epimetheus"], ["owner_id", "HR68183918895"], ["naccs_code", "15150059"], ["start_location", "DEN"], ["destination", "BOS"], ["ship_type", 2], ["created_at", "2023-09-03 10:27:30.897562"], ["updated_at", "2023-09-03 10:27:30.897562"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 11], ["next_port", "Yangpa"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "39 KM/H"], ["created_at", "2023-09-03 10:27:30.898350"], ["updated_at", "2023-09-03 10:27:30.898350"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19846729"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ophion"], ["owner_id", "HR37728674929"], ["naccs_code", "19846729"], ["start_location", "TPA"], ["destination", "BWI"], ["ship_type", 1], ["created_at", "2023-09-03 10:27:30.901127"], ["updated_at", "2023-09-03 10:27:30.901127"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 12], ["next_port", "Hyun Bin"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "7 KM/H"], ["created_at", "2023-09-03 10:27:30.901959"], ["updated_at", "2023-09-03 10:27:30.901959"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09726734"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR75392717521"], ["naccs_code", "09726734"], ["start_location", "HNL"], ["destination", "SLC"], ["ship_type", 1], ["created_at", "2023-09-03 10:27:30.904895"], ["updated_at", "2023-09-03 10:27:30.904895"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 13], ["next_port", "Seo Yuna"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "27 KM/H"], ["created_at", "2023-09-03 10:27:30.905762"], ["updated_at", "2023-09-03 10:27:30.905762"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02077406"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR10820449152"], ["naccs_code", "02077406"], ["start_location", "BWI"], ["destination", "MDW"], ["ship_type", 4], ["created_at", "2023-09-03 10:27:30.908695"], ["updated_at", "2023-09-03 10:27:30.908695"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 14], ["next_port", "Nicky Lee"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "48 KM/H"], ["created_at", "2023-09-03 10:27:30.909549"], ["updated_at", "2023-09-03 10:27:30.909549"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09892804"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR60688661193"], ["naccs_code", "09892804"], ["start_location", "MDW"], ["destination", "HNL"], ["ship_type", 0], ["created_at", "2023-09-03 10:27:30.912813"], ["updated_at", "2023-09-03 10:27:30.912813"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 15], ["next_port", "Wax"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "5 KM/H"], ["created_at", "2023-09-03 10:27:30.913650"], ["updated_at", "2023-09-03 10:27:30.913650"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01659894"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Themis"], ["owner_id", "HR57999921800"], ["naccs_code", "01659894"], ["start_location", "PHL"], ["destination", "LAS"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.916611"], ["updated_at", "2023-09-03 10:27:30.916611"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 16], ["next_port", "Kang Sung-hoon"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "47 KM/H"], ["created_at", "2023-09-03 10:27:30.917449"], ["updated_at", "2023-09-03 10:27:30.917449"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07919824"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Metis"], ["owner_id", "HR46517857469"], ["naccs_code", "07919824"], ["start_location", "DFW"], ["destination", "DTW"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.920573"], ["updated_at", "2023-09-03 10:27:30.920573"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 17], ["next_port", "Jang Dong-woo"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "44 KM/H"], ["created_at", "2023-09-03 10:27:30.921425"], ["updated_at", "2023-09-03 10:27:30.921425"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01536430"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR24886143965"], ["naccs_code", "01536430"], ["start_location", "SEA"], ["destination", "SFO"], ["ship_type", 1], ["created_at", "2023-09-03 10:27:30.924397"], ["updated_at", "2023-09-03 10:27:30.924397"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 18], ["next_port", "Taeyang"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "12 KM/H"], ["created_at", "2023-09-03 10:27:30.925262"], ["updated_at", "2023-09-03 10:27:30.925262"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19996288"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR57236292343"], ["naccs_code", "19996288"], ["start_location", "DEN"], ["destination", "TPA"], ["ship_type", 0], ["created_at", "2023-09-03 10:27:30.928201"], ["updated_at", "2023-09-03 10:27:30.928201"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 19], ["next_port", "Shoo"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "17 KM/H"], ["created_at", "2023-09-03 10:27:30.929055"], ["updated_at", "2023-09-03 10:27:30.929055"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09914964"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR98863451577"], ["naccs_code", "09914964"], ["start_location", "PHL"], ["destination", "PHX"], ["ship_type", 3], ["created_at", "2023-09-03 10:27:30.931996"], ["updated_at", "2023-09-03 10:27:30.931996"]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 20], ["next_port", "Victoria Song"], ["eta", "2023-09-05 10:27:30 UTC"], ["speed", "8 KM/H"], ["created_at", "2023-09-03 10:27:30.932842"], ["updated_at", "2023-09-03 10:27:30.932842"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m

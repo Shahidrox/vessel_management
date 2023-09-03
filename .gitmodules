@@ -1,0 +1,3 @@
+[submodule "vendor/gems/vessel_core"]
+	path = vendor/gems/vessel_core
+	url = https://github.com/Shahidrox/vessel_core.git

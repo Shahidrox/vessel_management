@@ -1,0 +1,723 @@
+  [1m[35m (41.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "naccs_test"[0m
+  [1m[35m (107.2ms)[0m  [1m[35mCREATE DATABASE "naccs_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-09-03 04:02:15.484097"], ["updated_at", "2023-09-03 04:02:15.484097"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b92e66cda38ee9d2dddee982055530438b223286"], ["created_at", "2023-09-03 04:02:15.488076"], ["updated_at", "2023-09-03 04:02:15.488076"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02311968"], ["LIMIT", 1]]
+  [1m[36mVessel Create (1.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR41187575887"], ["naccs_code", "02311968"], ["start_location", "PDX"], ["destination", "JFK"], ["ship_type", 1], ["created_at", "2023-09-03 04:03:59.695736"], ["updated_at", "2023-09-03 04:03:59.695736"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01638752"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR39792217387"], ["naccs_code", "01638752"], ["start_location", "IAH"], ["destination", "LGA"], ["ship_type", 1], ["created_at", "2023-09-03 04:03:59.698424"], ["updated_at", "2023-09-03 04:03:59.698424"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 13:03:59 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02772110"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tethys"], ["owner_id", "HR24856266507"], ["naccs_code", "02772110"], ["start_location", "CLT"], ["destination", "JFK"], ["ship_type", 1], ["created_at", "2023-09-03 04:03:59.751910"], ["updated_at", "2023-09-03 04:03:59.751910"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11729006"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Epimetheus"], ["owner_id", "HR56081573759"], ["naccs_code", "11729006"], ["start_location", "IAH"], ["destination", "DCA"], ["ship_type", 0], ["created_at", "2023-09-03 04:03:59.753163"], ["updated_at", "2023-09-03 04:03:59.753163"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels" for 127.0.0.1 at 2023-09-03 13:03:59 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mVesselTracking Load (0.6ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 3]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11237921"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR76971757988"], ["naccs_code", "11237921"], ["start_location", "TPA"], ["destination", "DFW"], ["ship_type", 1], ["created_at", "2023-09-03 04:03:59.772192"], ["updated_at", "2023-09-03 04:03:59.772192"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03910184"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR88600050830"], ["naccs_code", "03910184"], ["start_location", "SAN"], ["destination", "MCO"], ["ship_type", 0], ["created_at", "2023-09-03 04:03:59.773300"], ["updated_at", "2023-09-03 04:03:59.773300"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show5" for 127.0.0.1 at 2023-09-03 13:03:59 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16568969"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pallas"], ["owner_id", "HR54103607197"], ["naccs_code", "16568969"], ["start_location", "MSP"], ["destination", "MIA"], ["ship_type", 4], ["created_at", "2023-09-03 04:03:59.775247"], ["updated_at", "2023-09-03 04:03:59.775247"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "17928069"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cronus"], ["owner_id", "HR11892003872"], ["naccs_code", "17928069"], ["start_location", "ORD"], ["destination", "IAH"], ["ship_type", 1], ["created_at", "2023-09-03 04:03:59.776347"], ["updated_at", "2023-09-03 04:03:59.776347"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show/7" for 127.0.0.1 at 2023-09-03 13:03:59 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02721002"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Metis"], ["owner_id", "HR43287757542"], ["naccs_code", "02721002"], ["start_location", "JFK"], ["destination", "JFK"], ["ship_type", 4], ["created_at", "2023-09-03 04:03:59.778211"], ["updated_at", "2023-09-03 04:03:59.778211"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06682750"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Asteria"], ["owner_id", "HR91277718013"], ["naccs_code", "06682750"], ["start_location", "DFW"], ["destination", "CLT"], ["ship_type", 2], ["created_at", "2023-09-03 04:03:59.779211"], ["updated_at", "2023-09-03 04:03:59.779211"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/v1/vessels/destroy/10" for 127.0.0.1 at 2023-09-03 13:03:59 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09366060"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR52418262019"], ["naccs_code", "09366060"], ["start_location", "MSP"], ["destination", "PHL"], ["ship_type", 0], ["created_at", "2023-09-03 04:05:02.868116"], ["updated_at", "2023-09-03 04:05:02.868116"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04191865"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR45487669303"], ["naccs_code", "04191865"], ["start_location", "IAH"], ["destination", "MIA"], ["ship_type", 1], ["created_at", "2023-09-03 04:05:02.870004"], ["updated_at", "2023-09-03 04:05:02.870004"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 13:05:02 +0900
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07319457"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR71327861293"], ["naccs_code", "07319457"], ["start_location", "HNL"], ["destination", "SEA"], ["ship_type", 0], ["created_at", "2023-09-03 04:05:49.967486"], ["updated_at", "2023-09-03 04:05:49.967486"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02386454"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR44898603393"], ["naccs_code", "02386454"], ["start_location", "BOS"], ["destination", "LGA"], ["ship_type", 2], ["created_at", "2023-09-03 04:05:49.969352"], ["updated_at", "2023-09-03 04:05:49.969352"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 13:05:49 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16896598"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR62866372345"], ["naccs_code", "16896598"], ["start_location", "MSP"], ["destination", "ORD"], ["ship_type", 0], ["created_at", "2023-09-03 04:05:49.997258"], ["updated_at", "2023-09-03 04:05:49.997258"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02399478"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR27468333626"], ["naccs_code", "02399478"], ["start_location", "IAD"], ["destination", "BOS"], ["ship_type", 4], ["created_at", "2023-09-03 04:06:07.791404"], ["updated_at", "2023-09-03 04:06:07.791404"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07708275"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Clymene"], ["owner_id", "HR19895015598"], ["naccs_code", "07708275"], ["start_location", "EWR"], ["destination", "DFW"], ["ship_type", 0], ["created_at", "2023-09-03 04:06:07.793206"], ["updated_at", "2023-09-03 04:06:07.793206"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels" for 127.0.0.1 at 2023-09-03 13:06:07 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 16]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 17]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18002577"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Lelantos"], ["owner_id", "HR43296027421"], ["naccs_code", "18002577"], ["start_location", "DEN"], ["destination", "SAN"], ["ship_type", 0], ["created_at", "2023-09-03 04:06:18.034645"], ["updated_at", "2023-09-03 04:06:18.034645"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09136748"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR25316638291"], ["naccs_code", "09136748"], ["start_location", "PHL"], ["destination", "BOS"], ["ship_type", 3], ["created_at", "2023-09-03 04:06:18.036513"], ["updated_at", "2023-09-03 04:06:18.036513"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show18" for 127.0.0.1 at 2023-09-03 13:06:18 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08342409"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Clymene"], ["owner_id", "HR45295199718"], ["naccs_code", "08342409"], ["start_location", "LGA"], ["destination", "PDX"], ["ship_type", 3], ["created_at", "2023-09-03 04:06:32.995732"], ["updated_at", "2023-09-03 04:06:32.995732"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04877165"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Prometheus"], ["owner_id", "HR49976818046"], ["naccs_code", "04877165"], ["start_location", "ORD"], ["destination", "FLL"], ["ship_type", 2], ["created_at", "2023-09-03 04:06:32.997538"], ["updated_at", "2023-09-03 04:06:32.997538"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show/20" for 127.0.0.1 at 2023-09-03 13:06:33 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08814241"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Themis"], ["owner_id", "HR49463770519"], ["naccs_code", "08814241"], ["start_location", "FLL"], ["destination", "SLC"], ["ship_type", 3], ["created_at", "2023-09-03 04:07:25.618836"], ["updated_at", "2023-09-03 04:07:25.618836"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18630800"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR34102790113"], ["naccs_code", "18630800"], ["start_location", "LGA"], ["destination", "DEN"], ["ship_type", 1], ["created_at", "2023-09-03 04:07:25.620744"], ["updated_at", "2023-09-03 04:07:25.620744"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=22" for 127.0.0.1 at 2023-09-03 13:07:25 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 22]]
+  [1m[36mVesselTracking Load (0.6ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 22]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13030841"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR33059943912"], ["naccs_code", "13030841"], ["start_location", "MIA"], ["destination", "SAN"], ["ship_type", 0], ["created_at", "2023-09-03 04:08:07.207967"], ["updated_at", "2023-09-03 04:08:07.207967"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05340057"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR99465037624"], ["naccs_code", "05340057"], ["start_location", "EWR"], ["destination", "PHX"], ["ship_type", 4], ["created_at", "2023-09-03 04:08:07.209836"], ["updated_at", "2023-09-03 04:08:07.209836"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:08:07 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14977725"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Epimetheus"], ["owner_id", "HR36105052716"], ["naccs_code", "14977725"], ["start_location", "DEN"], ["destination", "JFK"], ["ship_type", 1], ["created_at", "2023-09-03 04:39:12.064550"], ["updated_at", "2023-09-03 04:39:12.064550"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04761068"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR13463819867"], ["naccs_code", "04761068"], ["start_location", "LGA"], ["destination", "SAN"], ["ship_type", 3], ["created_at", "2023-09-03 04:39:12.066489"], ["updated_at", "2023-09-03 04:39:12.066489"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:39:12 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14860775"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Clymene"], ["owner_id", "HR78420102215"], ["naccs_code", "14860775"], ["start_location", "ORD"], ["destination", "DFW"], ["ship_type", 4], ["created_at", "2023-09-03 04:40:43.184925"], ["updated_at", "2023-09-03 04:40:43.184925"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07032172"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR32503472906"], ["naccs_code", "07032172"], ["start_location", "DTW"], ["destination", "LAS"], ["ship_type", 1], ["created_at", "2023-09-03 04:40:43.186782"], ["updated_at", "2023-09-03 04:40:43.186782"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:40:43 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "17918855"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Themis"], ["owner_id", "HR54819810657"], ["naccs_code", "17918855"], ["start_location", "PHL"], ["destination", "IAD"], ["ship_type", 1], ["created_at", "2023-09-03 04:40:49.135762"], ["updated_at", "2023-09-03 04:40:49.135762"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07712593"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR81184789201"], ["naccs_code", "07712593"], ["start_location", "JFK"], ["destination", "DCA"], ["ship_type", 0], ["created_at", "2023-09-03 04:40:49.137622"], ["updated_at", "2023-09-03 04:40:49.137622"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:40:49 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16895812"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Clymene"], ["owner_id", "HR45418280367"], ["naccs_code", "16895812"], ["start_location", "MIA"], ["destination", "DTW"], ["ship_type", 1], ["created_at", "2023-09-03 04:41:18.645705"], ["updated_at", "2023-09-03 04:41:18.645705"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13935160"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Astraeus"], ["owner_id", "HR95600219441"], ["naccs_code", "13935160"], ["start_location", "SLC"], ["destination", "PHL"], ["ship_type", 4], ["created_at", "2023-09-03 04:41:18.647573"], ["updated_at", "2023-09-03 04:41:18.647573"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=32" for 127.0.0.1 at 2023-09-03 13:41:18 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 32]]
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 32]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02335629"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR22864685081"], ["naccs_code", "02335629"], ["start_location", "BOS"], ["destination", "SAN"], ["ship_type", 1], ["created_at", "2023-09-03 04:41:57.958625"], ["updated_at", "2023-09-03 04:41:57.958625"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "13083915"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Menoetius"], ["owner_id", "HR55307052233"], ["naccs_code", "13083915"], ["start_location", "LAS"], ["destination", "DEN"], ["ship_type", 2], ["created_at", "2023-09-03 04:41:57.960562"], ["updated_at", "2023-09-03 04:41:57.960562"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=34" for 127.0.0.1 at 2023-09-03 13:41:57 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 34]]
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 34]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16008700"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR13264618465"], ["naccs_code", "16008700"], ["start_location", "JFK"], ["destination", "JFK"], ["ship_type", 4], ["created_at", "2023-09-03 04:42:22.272630"], ["updated_at", "2023-09-03 04:42:22.272630"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06715427"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eurynome"], ["owner_id", "HR57789718382"], ["naccs_code", "06715427"], ["start_location", "SAN"], ["destination", "SLC"], ["ship_type", 1], ["created_at", "2023-09-03 04:42:22.274518"], ["updated_at", "2023-09-03 04:42:22.274518"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=36" for 127.0.0.1 at 2023-09-03 13:42:22 +0900
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 36]]
+  [1m[36mVesselTracking Load (0.6ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 36]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12046799"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR48783125133"], ["naccs_code", "12046799"], ["start_location", "IAH"], ["destination", "SAN"], ["ship_type", 0], ["created_at", "2023-09-03 04:42:33.191779"], ["updated_at", "2023-09-03 04:42:33.191779"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01086164"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Mnemosyne"], ["owner_id", "HR65051533240"], ["naccs_code", "01086164"], ["start_location", "CLT"], ["destination", "PDX"], ["ship_type", 3], ["created_at", "2023-09-03 04:42:33.193646"], ["updated_at", "2023-09-03 04:42:33.193646"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:42:33 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14527531"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Selene"], ["owner_id", "HR30228138747"], ["naccs_code", "14527531"], ["start_location", "CLT"], ["destination", "LGA"], ["ship_type", 3], ["created_at", "2023-09-03 04:43:01.606777"], ["updated_at", "2023-09-03 04:43:01.606777"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19719207"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR68660063300"], ["naccs_code", "19719207"], ["start_location", "ORD"], ["destination", "LAX"], ["ship_type", 1], ["created_at", "2023-09-03 04:43:01.608508"], ["updated_at", "2023-09-03 04:43:01.608508"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=40" for 127.0.0.1 at 2023-09-03 13:43:01 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 40]]
+  [1m[36mVesselTracking Load (0.9ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 40]]
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03644775"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pallas"], ["owner_id", "HR91351461471"], ["naccs_code", "03644775"], ["start_location", "LAS"], ["destination", "DFW"], ["ship_type", 2], ["created_at", "2023-09-03 04:43:36.368446"], ["updated_at", "2023-09-03 04:43:36.368446"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09268838"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR30982660332"], ["naccs_code", "09268838"], ["start_location", "SLC"], ["destination", "PHL"], ["ship_type", 2], ["created_at", "2023-09-03 04:43:36.370357"], ["updated_at", "2023-09-03 04:43:36.370357"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 13:43:36 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05070008"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR31995128324"], ["naccs_code", "05070008"], ["start_location", "LAX"], ["destination", "PDX"], ["ship_type", 0], ["created_at", "2023-09-03 04:43:36.397487"], ["updated_at", "2023-09-03 04:43:36.397487"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15329141"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR58988673642"], ["naccs_code", "15329141"], ["start_location", "DTW"], ["destination", "CLT"], ["ship_type", 1], ["created_at", "2023-09-03 04:43:36.401432"], ["updated_at", "2023-09-03 04:43:36.401432"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05908530"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR92738200948"], ["naccs_code", "05908530"], ["start_location", "ATL"], ["destination", "FLL"], ["ship_type", 3], ["created_at", "2023-09-03 04:43:36.402606"], ["updated_at", "2023-09-03 04:43:36.402606"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels" for 127.0.0.1 at 2023-09-03 13:43:36 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 45]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 46]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16956391"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR49779813441"], ["naccs_code", "16956391"], ["start_location", "PHX"], ["destination", "BWI"], ["ship_type", 0], ["created_at", "2023-09-03 04:43:36.415363"], ["updated_at", "2023-09-03 04:43:36.415363"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15122988"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Metis"], ["owner_id", "HR55852396050"], ["naccs_code", "15122988"], ["start_location", "SEA"], ["destination", "DTW"], ["ship_type", 4], ["created_at", "2023-09-03 04:43:36.416613"], ["updated_at", "2023-09-03 04:43:36.416613"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=47" for 127.0.0.1 at 2023-09-03 13:43:36 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 47]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 47]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07233203"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Leto"], ["owner_id", "HR43925212293"], ["naccs_code", "07233203"], ["start_location", "PHX"], ["destination", "FLL"], ["ship_type", 4], ["created_at", "2023-09-03 04:43:36.420363"], ["updated_at", "2023-09-03 04:43:36.420363"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15861962"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR23387041481"], ["naccs_code", "15861962"], ["start_location", "DTW"], ["destination", "FLL"], ["ship_type", 0], ["created_at", "2023-09-03 04:43:36.421488"], ["updated_at", "2023-09-03 04:43:36.421488"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:43:36 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07814860"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.4ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Pallas"], ["owner_id", "HR65198667641"], ["naccs_code", "07814860"], ["start_location", "PDX"], ["destination", "IAH"], ["ship_type", 4], ["created_at", "2023-09-03 04:43:36.426196"], ["updated_at", "2023-09-03 04:43:36.426196"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14826856"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Themis"], ["owner_id", "HR75075922572"], ["naccs_code", "14826856"], ["start_location", "IAH"], ["destination", "PHL"], ["ship_type", 1], ["created_at", "2023-09-03 04:43:36.427518"], ["updated_at", "2023-09-03 04:43:36.427518"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/v1/vessels/destroy/52" for 127.0.0.1 at 2023-09-03 13:43:36 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "09103788"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR53116681250"], ["naccs_code", "09103788"], ["start_location", "LAX"], ["destination", "LAX"], ["ship_type", 0], ["created_at", "2023-09-03 04:44:03.920427"], ["updated_at", "2023-09-03 04:44:03.920427"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "08413994"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Aura"], ["owner_id", "HR80899649644"], ["naccs_code", "08413994"], ["start_location", "EWR"], ["destination", "BOS"], ["ship_type", 1], ["created_at", "2023-09-03 04:44:03.922296"], ["updated_at", "2023-09-03 04:44:03.922296"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/v1/vessels/show" for 127.0.0.1 at 2023-09-03 13:44:03 +0900
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14284861"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tethys"], ["owner_id", "HR47796731482"], ["naccs_code", "14284861"], ["start_location", "LGA"], ["destination", "HNL"], ["ship_type", 3], ["created_at", "2023-09-03 04:45:44.295144"], ["updated_at", "2023-09-03 04:45:44.295144"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11967712"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR10980003590"], ["naccs_code", "11967712"], ["start_location", "LAS"], ["destination", "HNL"], ["ship_type", 0], ["created_at", "2023-09-03 04:45:44.297154"], ["updated_at", "2023-09-03 04:45:44.297154"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=55" for 127.0.0.1 at 2023-09-03 13:45:44 +0900
+  [1m[36mVessel Load (0.4ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 55]]
+  [1m[36mVesselTracking Load (0.9ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 55]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06161361"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR30149947709"], ["naccs_code", "06161361"], ["start_location", "IAH"], ["destination", "PDX"], ["ship_type", 3], ["created_at", "2023-09-03 04:46:03.717966"], ["updated_at", "2023-09-03 04:46:03.717966"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19234793"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Metis"], ["owner_id", "HR16828190680"], ["naccs_code", "19234793"], ["start_location", "ORD"], ["destination", "TPA"], ["ship_type", 1], ["created_at", "2023-09-03 04:46:03.719903"], ["updated_at", "2023-09-03 04:46:03.719903"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 13:46:03 +0900
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12957835"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Styx"], ["owner_id", "HR38384228923"], ["naccs_code", "12957835"], ["start_location", "LAX"], ["destination", "PHX"], ["ship_type", 0], ["created_at", "2023-09-03 04:46:03.748143"], ["updated_at", "2023-09-03 04:46:03.748143"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07544095"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR54204758774"], ["naccs_code", "07544095"], ["start_location", "FLL"], ["destination", "MSP"], ["ship_type", 4], ["created_at", "2023-09-03 04:46:03.752079"], ["updated_at", "2023-09-03 04:46:03.752079"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14950070"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Styx"], ["owner_id", "HR24843639461"], ["naccs_code", "14950070"], ["start_location", "SLC"], ["destination", "JFK"], ["ship_type", 1], ["created_at", "2023-09-03 04:46:03.753221"], ["updated_at", "2023-09-03 04:46:03.753221"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels" for 127.0.0.1 at 2023-09-03 13:46:03 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 60]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 61]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12919208"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.5ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Menoetius"], ["owner_id", "HR20123804057"], ["naccs_code", "12919208"], ["start_location", "ATL"], ["destination", "DCA"], ["ship_type", 1], ["created_at", "2023-09-03 04:46:03.765660"], ["updated_at", "2023-09-03 04:46:03.765660"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19998046"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Rhea"], ["owner_id", "HR95104773587"], ["naccs_code", "19998046"], ["start_location", "DCA"], ["destination", "PHL"], ["ship_type", 2], ["created_at", "2023-09-03 04:46:03.767084"], ["updated_at", "2023-09-03 04:46:03.767084"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=62" for 127.0.0.1 at 2023-09-03 13:46:03 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 62]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 62]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12670369"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR67389444631"], ["naccs_code", "12670369"], ["start_location", "LAS"], ["destination", "MCO"], ["ship_type", 4], ["created_at", "2023-09-03 04:46:03.770837"], ["updated_at", "2023-09-03 04:46:03.770837"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01493276"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ophion"], ["owner_id", "HR18012521495"], ["naccs_code", "01493276"], ["start_location", "EWR"], ["destination", "CLT"], ["ship_type", 4], ["created_at", "2023-09-03 04:46:03.771952"], ["updated_at", "2023-09-03 04:46:03.771952"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=64" for 127.0.0.1 at 2023-09-03 13:46:03 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 64]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 64]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "19736525"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Themis"], ["owner_id", "HR58140085070"], ["naccs_code", "19736525"], ["start_location", "BOS"], ["destination", "SEA"], ["ship_type", 2], ["created_at", "2023-09-03 04:46:03.774875"], ["updated_at", "2023-09-03 04:46:03.774875"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06100728"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Lelantos"], ["owner_id", "HR78578117751"], ["naccs_code", "06100728"], ["start_location", "TPA"], ["destination", "JFK"], ["ship_type", 1], ["created_at", "2023-09-03 04:46:03.775974"], ["updated_at", "2023-09-03 04:46:03.775974"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/v1/vessels/destroy" for 127.0.0.1 at 2023-09-03 13:46:03 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 66]]
+  [1m[36mVessel Destroy (0.5ms)[0m  [1m[31mDELETE FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 66]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15273826"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Prometheus"], ["owner_id", "HR97083772516"], ["naccs_code", "15273826"], ["start_location", "EWR"], ["destination", "JFK"], ["ship_type", 0], ["created_at", "2023-09-03 04:52:15.332971"], ["updated_at", "2023-09-03 04:52:15.332971"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14208867"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Coeus"], ["owner_id", "HR91531327284"], ["naccs_code", "14208867"], ["start_location", "PHL"], ["destination", "SEA"], ["ship_type", 1], ["created_at", "2023-09-03 04:52:35.277650"], ["updated_at", "2023-09-03 04:52:35.277650"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (1.6ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 69], ["next_port", "Shin Hye-jeong"], ["eta", "2023-09-05 04:52:35 UTC"], ["speed", "21 KM/H"], ["created_at", "2023-09-03 04:52:35.289524"], ["updated_at", "2023-09-03 04:52:35.289524"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/v1/vessel_trackings" for 127.0.0.1 at 2023-09-03 13:52:35 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "04959144"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Lelantos"], ["owner_id", "HR76529810133"], ["naccs_code", "04959144"], ["start_location", "PHX"], ["destination", "SEA"], ["ship_type", 4], ["created_at", "2023-09-03 04:52:47.778683"], ["updated_at", "2023-09-03 04:52:47.778683"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.9ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 70], ["next_port", "Dok2"], ["eta", "2023-09-05 04:52:47 UTC"], ["speed", "17 KM/H"], ["created_at", "2023-09-03 04:52:47.789002"], ["updated_at", "2023-09-03 04:52:47.789002"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessel_trackings?vessel_id=70" for 127.0.0.1 at 2023-09-03 13:52:47 +0900
+  [1m[36mVesselTracking Load (0.5ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 70]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12192649"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR31192337671"], ["naccs_code", "12192649"], ["start_location", "LAS"], ["destination", "DCA"], ["ship_type", 0], ["created_at", "2023-09-03 04:58:12.869349"], ["updated_at", "2023-09-03 04:58:12.869349"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (1.0ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 71], ["next_port", "Lee Min-ho"], ["eta", "2023-09-05 04:58:12 UTC"], ["speed", "26 KM/H"], ["created_at", "2023-09-03 04:58:12.879978"], ["updated_at", "2023-09-03 04:58:12.879978"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/v1/vessel_trackings/create" for 127.0.0.1 at 2023-09-03 13:58:12 +0900
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mVesselTracking Create (0.5ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 71], ["next_port", "Jun Hyoseong"], ["eta", "2023-09-04 04:58:12 UTC"], ["speed", "3 KM/H"], ["created_at", "2023-09-03 04:58:12.909901"], ["updated_at", "2023-09-03 04:58:12.909901"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12665808"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dione"], ["owner_id", "HR57880501546"], ["naccs_code", "12665808"], ["start_location", "IAH"], ["destination", "LAX"], ["ship_type", 0], ["created_at", "2023-09-03 05:01:00.874921"], ["updated_at", "2023-09-03 05:01:00.874921"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.9ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 72], ["next_port", "Lee Jong-hyun"], ["eta", "2023-09-05 05:01:00 UTC"], ["speed", "36 KM/H"], ["created_at", "2023-09-03 05:01:00.885689"], ["updated_at", "2023-09-03 05:01:00.885689"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.5ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" ORDER BY "vessel_trackings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/v1/vessel_trackings/update" for 127.0.0.1 at 2023-09-03 14:01:00 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  [1m[36mVesselTracking Update (0.4ms)[0m  [1m[33mUPDATE "vessel_trackings" SET "speed" = $1, "updated_at" = $2 WHERE "vessel_trackings"."id" = $3[0m  [["speed", "47 KM/H"], ["updated_at", "2023-09-03 05:01:00.916907"], ["id", 5]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "07686139"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR24658918366"], ["naccs_code", "07686139"], ["start_location", "MCO"], ["destination", "HNL"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:42.607323"], ["updated_at", "2023-09-03 05:02:42.607323"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.9ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 73], ["next_port", "Dean"], ["eta", "2023-09-05 05:02:42 UTC"], ["speed", "41 KM/H"], ["created_at", "2023-09-03 05:02:42.617725"], ["updated_at", "2023-09-03 05:02:42.617725"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessel_trackings?vessel_id=73" for 127.0.0.1 at 2023-09-03 14:02:42 +0900
+  [1m[36mVesselTracking Load (0.7ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 73]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18704709"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.4ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Leto"], ["owner_id", "HR93580760478"], ["naccs_code", "18704709"], ["start_location", "PHX"], ["destination", "LGA"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:42.650504"], ["updated_at", "2023-09-03 05:02:42.650504"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 74], ["next_port", "No Minwoo"], ["eta", "2023-09-05 05:02:42 UTC"], ["speed", "8 KM/H"], ["created_at", "2023-09-03 05:02:42.651559"], ["updated_at", "2023-09-03 05:02:42.651559"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/v1/vessel_trackings/create" for 127.0.0.1 at 2023-09-03 14:02:42 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.3ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 74], ["next_port", "Gongchan"], ["eta", "2023-09-04 05:02:42 UTC"], ["speed", "48 KM/H"], ["created_at", "2023-09-03 05:02:42.655317"], ["updated_at", "2023-09-03 05:02:42.655317"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "18934830"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Prometheus"], ["owner_id", "HR90353374271"], ["naccs_code", "18934830"], ["start_location", "JFK"], ["destination", "CLT"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:42.657318"], ["updated_at", "2023-09-03 05:02:42.657318"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 75], ["next_port", "Lay"], ["eta", "2023-09-05 05:02:42 UTC"], ["speed", "42 KM/H"], ["created_at", "2023-09-03 05:02:42.658062"], ["updated_at", "2023-09-03 05:02:42.658062"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" ORDER BY "vessel_trackings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/v1/vessel_trackings/update" for 127.0.0.1 at 2023-09-03 14:02:42 +0900
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05378906"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eurynome"], ["owner_id", "HR10880816354"], ["naccs_code", "05378906"], ["start_location", "LAS"], ["destination", "ORD"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:42.663220"], ["updated_at", "2023-09-03 05:02:42.663220"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 76], ["next_port", "Nicole"], ["eta", "2023-09-05 05:02:42 UTC"], ["speed", "29 KM/H"], ["created_at", "2023-09-03 05:02:42.663969"], ["updated_at", "2023-09-03 05:02:42.663969"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" ORDER BY "vessel_trackings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/v1/vessel_trackings/destroy" for 127.0.0.1 at 2023-09-03 14:02:42 +0900
+  [1m[36mVesselTracking Load (0.3ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "02959788"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.6ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Helios"], ["owner_id", "HR21166134280"], ["naccs_code", "02959788"], ["start_location", "SAN"], ["destination", "LAX"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:53.968396"], ["updated_at", "2023-09-03 05:02:53.968396"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.8ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 77], ["next_port", "Do Kyung-soo"], ["eta", "2023-09-05 05:02:53 UTC"], ["speed", "26 KM/H"], ["created_at", "2023-09-03 05:02:53.978549"], ["updated_at", "2023-09-03 05:02:53.978549"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessel_trackings?vessel_id=77" for 127.0.0.1 at 2023-09-03 14:02:53 +0900
+  [1m[36mVesselTracking Load (0.5ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 77]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01506655"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Leto"], ["owner_id", "HR84157904038"], ["naccs_code", "01506655"], ["start_location", "MSP"], ["destination", "DCA"], ["ship_type", 1], ["created_at", "2023-09-03 05:02:54.011978"], ["updated_at", "2023-09-03 05:02:54.011978"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 78], ["next_port", "Kim Soo-hyun"], ["eta", "2023-09-05 05:02:54 UTC"], ["speed", "8 KM/H"], ["created_at", "2023-09-03 05:02:54.013040"], ["updated_at", "2023-09-03 05:02:54.013040"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/v1/vessel_trackings/create" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 78], ["next_port", "Park Myeong-su"], ["eta", "2023-09-04 05:02:54 UTC"], ["speed", "41 KM/H"], ["created_at", "2023-09-03 05:02:54.016876"], ["updated_at", "2023-09-03 05:02:54.016876"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "06297350"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Atlas"], ["owner_id", "HR92466563969"], ["naccs_code", "06297350"], ["start_location", "SEA"], ["destination", "FLL"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:54.018870"], ["updated_at", "2023-09-03 05:02:54.018870"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 79], ["next_port", "Lexy"], ["eta", "2023-09-05 05:02:54 UTC"], ["speed", "13 KM/H"], ["created_at", "2023-09-03 05:02:54.019592"], ["updated_at", "2023-09-03 05:02:54.019592"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" ORDER BY "vessel_trackings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/v1/vessel_trackings/update" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  [1m[36mVesselTracking Update (0.3ms)[0m  [1m[33mUPDATE "vessel_trackings" SET "speed" = $1, "updated_at" = $2 WHERE "vessel_trackings"."id" = $3[0m  [["speed", "72 KM/H"], ["updated_at", "2023-09-03 05:02:54.023341"], ["id", 14]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11468738"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Prometheus"], ["owner_id", "HR28060181818"], ["naccs_code", "11468738"], ["start_location", "SAN"], ["destination", "SEA"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:54.025257"], ["updated_at", "2023-09-03 05:02:54.025257"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Create (0.3ms)[0m  [1m[32mINSERT INTO "vessel_trackings" ("vessel_id", "next_port", "eta", "speed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["vessel_id", 80], ["next_port", "Park Myeong-su"], ["eta", "2023-09-05 05:02:54 UTC"], ["speed", "27 KM/H"], ["created_at", "2023-09-03 05:02:54.025978"], ["updated_at", "2023-09-03 05:02:54.025978"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" ORDER BY "vessel_trackings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/v1/vessel_trackings/destroy" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "vessel_trackings" WHERE "vessel_trackings"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "16511941"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR93913179106"], ["naccs_code", "16511941"], ["start_location", "ORD"], ["destination", "ATL"], ["ship_type", 3], ["created_at", "2023-09-03 05:02:54.030285"], ["updated_at", "2023-09-03 05:02:54.030285"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12227679"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Tethys"], ["owner_id", "HR56156370553"], ["naccs_code", "12227679"], ["start_location", "SEA"], ["destination", "MSP"], ["ship_type", 4], ["created_at", "2023-09-03 05:02:54.031434"], ["updated_at", "2023-09-03 05:02:54.031434"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+Started POST "/v1/vessels/create" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "15693761"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Menoetius"], ["owner_id", "HR87846681770"], ["naccs_code", "15693761"], ["start_location", "DTW"], ["destination", "PHL"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:54.034082"], ["updated_at", "2023-09-03 05:02:54.034082"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mVessel Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "vessels"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "01879681"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Epimetheus"], ["owner_id", "HR58891233869"], ["naccs_code", "01879681"], ["start_location", "PHL"], ["destination", "ATL"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:54.036106"], ["updated_at", "2023-09-03 05:02:54.036106"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "12884049"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.3ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Eos"], ["owner_id", "HR83865095110"], ["naccs_code", "12884049"], ["start_location", "PDX"], ["destination", "IAD"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:54.037164"], ["updated_at", "2023-09-03 05:02:54.037164"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels"[0m
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 84]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 85]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05524037"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Oceanus"], ["owner_id", "HR84279093156"], ["naccs_code", "05524037"], ["start_location", "DFW"], ["destination", "BOS"], ["ship_type", 4], ["created_at", "2023-09-03 05:02:54.043282"], ["updated_at", "2023-09-03 05:02:54.043282"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11732488"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Phoebe"], ["owner_id", "HR25523821464"], ["naccs_code", "11732488"], ["start_location", "PHL"], ["destination", "SEA"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:54.044355"], ["updated_at", "2023-09-03 05:02:54.044355"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=86" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVessel Load (0.2ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 86]]
+  [1m[36mVesselTracking Load (0.2ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 86]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "05196722"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.1ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Iapetus"], ["owner_id", "HR36268197920"], ["naccs_code", "05196722"], ["start_location", "BOS"], ["destination", "DFW"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:54.048655"], ["updated_at", "2023-09-03 05:02:54.048655"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "11621744"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Theia"], ["owner_id", "HR44023950039"], ["naccs_code", "11621744"], ["start_location", "SAN"], ["destination", "MDW"], ["ship_type", 2], ["created_at", "2023-09-03 05:02:54.049583"], ["updated_at", "2023-09-03 05:02:54.049583"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/v1/vessels/show?id=88" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVessel Load (0.1ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 88]]
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 88]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "03054390"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Perses"], ["owner_id", "HR47387806242"], ["naccs_code", "03054390"], ["start_location", "FLL"], ["destination", "JFK"], ["ship_type", 0], ["created_at", "2023-09-03 05:02:54.052182"], ["updated_at", "2023-09-03 05:02:54.052182"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVessel Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "vessels" WHERE "vessels"."naccs_code" = $1 LIMIT $2[0m  [["naccs_code", "14450631"], ["LIMIT", 1]]
+  [1m[36mVessel Create (0.2ms)[0m  [1m[32mINSERT INTO "vessels" ("name", "owner_id", "naccs_code", "start_location", "destination", "ship_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hyperion"], ["owner_id", "HR92481015506"], ["naccs_code", "14450631"], ["start_location", "MIA"], ["destination", "IAH"], ["ship_type", 3], ["created_at", "2023-09-03 05:02:54.053080"], ["updated_at", "2023-09-03 05:02:54.053080"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/v1/vessels/destroy" for 127.0.0.1 at 2023-09-03 14:02:54 +0900
+  [1m[36mVessel Load (0.1ms)[0m  [1m[34mSELECT "vessels".* FROM "vessels" WHERE "vessels"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mVesselTracking Load (0.1ms)[0m  [1m[34mSELECT "vessel_trackings".* FROM "vessel_trackings" WHERE "vessel_trackings"."vessel_id" = $1[0m  [["vessel_id", 90]]
+  [1m[36mVessel Destroy (0.4ms)[0m  [1m[31mDELETE FROM "vessels" WHERE "vessels"."id" = $1[0m  [["id", 90]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
